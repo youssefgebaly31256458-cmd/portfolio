@@ -9,6 +9,8 @@ export interface ProjectArchitecture {
 
 export interface Project {
   id: string;
+  indexNumber: string; // '01', '02', '03'
+  editorialIndex: string; // '01 / SHIFAA', '02 / GREENORA', '03 / DR. GEBALY'
   title: string;
   subtitle: string;
   categoryBadge: string;
@@ -16,13 +18,15 @@ export interface Project {
   keyCapabilities: string[];
   techStack: string[];
   githubUrl: string;
+  githubLabel?: string;
   liveUrl?: string;
-  liveLabel?: 'Live Preview' | 'Live Website';
+  liveLabel?: string;
   architectureDetails: ProjectArchitecture;
 }
 
 export interface ArchitectureTopic {
   id: string;
+  romanNumeral: string; // 'I', 'II', 'III'
   title: string;
   tagline: string;
   summary: string;
@@ -38,6 +42,7 @@ export interface ArchitectureTopic {
 
 export interface SkillCategory {
   category: string;
+  romanNumeral?: string;
   description: string;
   skills: {
     name: string;

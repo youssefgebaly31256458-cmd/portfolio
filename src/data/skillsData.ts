@@ -3,6 +3,7 @@ import type { SkillCategory } from '../types/portfolio';
 export const skillsData: SkillCategory[] = [
   {
     category: 'Backend & Clean Architecture',
+    romanNumeral: 'I',
     description: 'Modern RESTful Web APIs, relational schema design, clean architectural patterns, and defensive programming.',
     skills: [
       {
@@ -39,6 +40,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: 'Frontend Engineering & Performance',
+    romanNumeral: 'II',
     description: 'Pixel-precise, accessible, and high-performance user interfaces with smooth physics and micro-interactions.',
     skills: [
       {
@@ -75,6 +77,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: 'Cloud, Reliability & Tooling',
+    romanNumeral: 'III',
     description: 'Production infrastructure, automated safe deployment scripts, structured data, and search engine excellence.',
     skills: [
       {

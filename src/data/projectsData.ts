@@ -3,16 +3,18 @@ import type { Project } from '../types/portfolio';
 export const projectsData: Project[] = [
   {
     id: 'shifaa-clinic',
-    title: 'Shifaa — Clinic Management System (شفاء)',
-    subtitle: 'Full-Stack Healthcare System & Clinic Operations Engine',
-    categoryBadge: 'Enterprise SaaS',
+    indexNumber: '01',
+    editorialIndex: '01 / SHIFAA',
+    title: 'Shifaa (شفاء)',
+    subtitle: 'Outpatient Clinic Management System',
+    categoryBadge: 'Healthcare SaaS',
     valueProposition:
-      'An enterprise-grade medical clinic management platform engineered to orchestrate clinical workflows, physician consultations, and administrative operations with zero latency. It eliminates manual paper charts through unified electronic encounters and prevents appointment scheduling collisions across multi-physician practices.',
+      'An enterprise outpatient clinic operations engine orchestrating physician consultations, clinical encounter logging, and multi-doctor scheduling with zero collisions. Engineered with strict Clean Architecture to eliminate paper charts, automate prescription dispatch, and optimize reception intake queues by over 60%.',
     keyCapabilities: [
-      'Decoupled Clean Architecture (API, BLL, DAL) enforcing strict layer separation and domain isolation',
-      'Fine-grained Role-Based Access Control (RBAC) via claims-based JWT authentication for Admins, Doctors, and Staff',
-      'Normalized 3NF Microsoft SQL Server relational schema with transactional integrity and isolated audit trails',
-      'Real-time multi-doctor appointment lifecycle management with automated electronic prescription dispatch'
+      'Decoupled Clean Architecture (Presentation, BLL, DAL) with ASP.NET Core & C#',
+      'Fine-grained Role-Based Access Control (RBAC) via claims-based JWT authentication',
+      'Normalized 3NF SQL Server relational database with transactional encounter integrity',
+      'Real-time multi-physician appointment lifecycle & automated prescription engine'
     ],
     techStack: [
       'ASP.NET Core',
@@ -23,6 +25,7 @@ export const projectsData: Project[] = [
       'TypeScript'
     ],
     githubUrl: 'https://github.com/youssefgebaly31256458-cmd/shifaa-clinic-system',
+    githubLabel: 'View Source (GitHub)',
     architectureDetails: {
       pattern: 'Clean Architecture with Repository & Service Pattern (Presentation, BLL, DAL)',
       database: 'Normalized 3NF relational schema in Microsoft SQL Server with strict foreign key constraints, indexed doctor lookup keys, and isolated audit trails.',
@@ -37,13 +40,15 @@ export const projectsData: Project[] = [
   },
   {
     id: 'greenora-platform',
-    title: 'Greenora — Commercial Platform & Operations (جرينورا)',
-    subtitle: 'N-Tier Architecture, Artificial Turf Catalog & Lead Operations Engine',
+    indexNumber: '02',
+    editorialIndex: '02 / GREENORA',
+    title: 'Greenora (جرينورا)',
+    subtitle: 'Commercial Platform & Operations Engine',
     categoryBadge: 'Commercial Platform',
     valueProposition:
-      'A high-performance bilingual commercial web platform and operations engine powering synthetic turf contracting across regional markets. It automates customer lead qualification and on-site inspection intake while delivering zero-latency browsing through native Arabic RTL layouts.',
+      'A high-performance bilingual commercial platform and operations engine powering synthetic turf contracting across regional markets. Delivers zero-latency browsing through native Arabic RTL typography while automating customer lead intake, site inspection scheduling, and cloud database pooling.',
     keyCapabilities: [
-      'Decoupled N-Tier enterprise architecture: Greenora.API -> Greenora.BLL -> Greenora.DAL',
+      'N-Tier Enterprise Architecture: Greenora.API -> Greenora.BLL -> Greenora.DAL',
       'Cloud-hosted Microsoft SQL Server (MonsterASP.NET) with resilient connection pooling',
       'Type-safe input verification pairing client-side Zod validation with server-side C# DTOs',
       'Automated deployment routine with database migration safety checks and backup rotation'
@@ -57,8 +62,9 @@ export const projectsData: Project[] = [
       'Tailwind CSS'
     ],
     liveUrl: 'https://scoregrassbns.com',
-    liveLabel: 'Live Preview',
+    liveLabel: 'Live Platform',
     githubUrl: 'https://github.com/youssefgebaly31256458-cmd/greenora-platform',
+    githubLabel: 'View Source (GitHub)',
     architectureDetails: {
       pattern: 'N-Tier Layered Architecture strictly separating HTTP presentation, business orchestration, and EF Core data access.',
       database: 'Microsoft SQL Server instance deployed to MonsterASP.NET cloud hosting with normalized relations, auto-reconnect pooling, and EF Core migration tracking.',
@@ -73,11 +79,13 @@ export const projectsData: Project[] = [
   },
   {
     id: 'dr-gebaly-portfolio',
+    indexNumber: '03',
+    editorialIndex: '03 / DR. GEBALY',
     title: 'Dr. Gebaly Legal & Academic Portfolio',
-    subtitle: 'Legal Portfolio, Academic Jurisprudence & 100/100 Core Web Vitals',
+    subtitle: 'Legal Jurisprudence & 100/100 Core Web Vitals',
     categoryBadge: 'Production Showcase',
     valueProposition:
-      'An executive digital presence engineered for an esteemed High Court litigator and legal scholar to showcase landmark jurisprudence, commercial tax advisory, and judicial credentials. Built with static site generation for instantaneous loads and Google Rich Results search authority.',
+      'An executive digital presence engineered for an esteemed High Court litigator and legal scholar to showcase landmark jurisprudence, commercial tax advisory, and judicial credentials. Built with static site generation for sub-500ms loads and complete Google Rich Results search authority.',
     keyCapabilities: [
       '100/100 Google Lighthouse benchmark across Performance, Accessibility, Best Practices, and SEO',
       'Static Site Generation (SSG) with Next.js App Router for sub-500ms Largest Contentful Paint',
@@ -94,6 +102,7 @@ export const projectsData: Project[] = [
     liveUrl: 'https://dr-gebaly-legal.vercel.app',
     liveLabel: 'Live Website',
     githubUrl: 'https://github.com/youssefgebaly31256458-cmd/dr-gebaly-portfolio',
+    githubLabel: 'View Source (GitHub)',
     architectureDetails: {
       pattern: 'Next.js App Router with React Server Components (RSC) and build-time Static Site Generation (SSG).',
       database: 'Structured Content Modeling with typed schema definitions and build-time static generation for instantaneous response times.',

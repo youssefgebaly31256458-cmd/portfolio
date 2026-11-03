@@ -3,6 +3,7 @@ import type { ArchitectureTopic } from '../types/portfolio';
 export const architectureTopics: ArchitectureTopic[] = [
   {
     id: 'clean-architecture',
+    romanNumeral: 'I',
     title: 'Clean Architecture & Layered Systems',
     tagline: 'Strict Separation of Concerns across Presentation, BLL, and DAL',
     summary:
@@ -38,6 +39,7 @@ export const architectureTopics: ArchitectureTopic[] = [
   },
   {
     id: 'secure-apis',
+    romanNumeral: 'II',
     title: 'Secure APIs & Enterprise Defense',
     tagline: 'Cryptographic Auth, Granular RBAC, Input Sanitization & Auditability',
     summary:
@@ -73,6 +75,7 @@ export const architectureTopics: ArchitectureTopic[] = [
   },
   {
     id: 'production-reliability',
+    romanNumeral: 'III',
     title: 'Production Reliability & Delivery',
     tagline: 'Zero-Downtime Deployments, Resilient Data Layers & Core Web Vitals',
     summary:

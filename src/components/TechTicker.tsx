@@ -44,50 +44,53 @@ export const TechTicker: React.FC = () => {
     : techItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="w-full py-4">
-      {/* Category Filter Pills (Borderless seamless pills) */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-        <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 mr-2 flex items-center gap-1.5 select-none">
-          <Layers className="w-3.5 h-3.5 text-red-500" />
-          Filter Competence:
-        </span>
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            type="button"
-            onClick={() => setActiveCategory(cat)}
-            className={`px-3.5 py-1.5 text-xs font-mono rounded-full transition-all cursor-pointer ${
-              activeCategory === cat
-                ? 'bg-red-600 text-white shadow-[0_0_20px_rgba(239,68,68,0.35)] font-medium'
-                : 'bg-white/[0.03] hover:bg-white/[0.07] text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
+    <div className="w-full">
+      {/* Category Filter Tabs */}
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-white/10">
+        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#94A3B8] select-none">
+          <span className="text-[#00F5A0] font-semibold">STACK</span>
+          <span className="text-white/20">/</span>
+          <span>COMPETENCE DIRECTORY</span>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-4">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setActiveCategory(cat)}
+              className={`text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer pb-0.5 ${
+                activeCategory === cat
+                  ? 'text-white border-b-2 border-[#00F5A0] font-medium'
+                  : 'text-[#94A3B8] hover:text-white'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Static Informational Tech Cards with Ambient Hover Bloom */}
+      {/* Refined Monochrome Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
         {filteredItems.map((tech) => {
           const Icon = tech.icon;
           return (
             <div
               key={tech.name}
-              className="p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-between select-none relative group overflow-hidden"
+              className="p-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-[#00F5A0]/40 transition-all flex flex-col justify-between select-none group"
             >
-              <div className="radial-bloom" />
-              <div className="relative z-10 flex items-center justify-between mb-2">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 bg-white/[0.03] px-2 py-0.5 rounded-md">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8]/70 group-hover:text-[#94A3B8] transition-colors">
                   {tech.category}
                 </span>
-                <Icon className="w-4 h-4 text-slate-500 group-hover:text-red-400 transition-colors" />
+                <Icon className="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-[#00F5A0] transition-colors" />
               </div>
-              <div className="relative z-10">
-                <h4 className="text-xs font-semibold text-slate-200 group-hover:text-white transition-colors">
+              <div>
+                <h4 className="text-xs font-medium text-white group-hover:text-[#00F5A0] transition-colors">
                   {tech.name}
                 </h4>
-                <p className="text-[11px] text-slate-400 font-mono mt-0.5 truncate">
+                <p className="text-[11px] text-[#94A3B8] font-mono mt-0.5 truncate">
                   {tech.highlight}
                 </p>
               </div>

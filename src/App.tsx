@@ -12,46 +12,51 @@ const DEVELOPER_PHONE = '+201140423096';
 
 export function App(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-[#0B0D0E] text-[#E2E8F0] selection:bg-red-500/25 selection:text-white relative">
-      {/* Top Floating Navigation */}
-      <Navbar email={DEVELOPER_EMAIL} />
+    <div className="min-h-screen bg-[#050507] text-[#94A3B8] selection:bg-[#00F5A0]/25 selection:text-[#00F5A0] relative overflow-x-hidden">
+      {/* Centered Electric Indigo Ambient Radial Lighting (Reference #5) */}
+      <div className="fixed inset-0 bg-ambient-indigo pointer-events-none z-0" />
 
-      {/* Main Continuous Canvas Flow */}
-      <main className="space-y-4 md:space-y-8">
-        {/* 1. Hero Section & Tech Ticker */}
-        <Hero email={DEVELOPER_EMAIL} />
+      <div className="relative z-10">
+        {/* Top Floating Navigation */}
+        <Navbar email={DEVELOPER_EMAIL} />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="fading-divider" />
-        </div>
+        {/* Main Canvas Flow */}
+        <main className="space-y-4 md:space-y-8">
+          {/* 1. Hero Section & Tech Stack Bar */}
+          <Hero email={DEVELOPER_EMAIL} />
 
-        {/* 2. Fluid Featured Projects Showcase */}
-        <FeaturedProjects />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-b border-white/10" />
+          </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="fading-divider" />
-        </div>
+          {/* 2. Seamless & Borderless Projects Showcase */}
+          <FeaturedProjects />
 
-        {/* 3. Architecture & Philosophy */}
-        <ArchitectureSection />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-b border-white/10" />
+          </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="fading-divider" />
-        </div>
+          {/* 3. Clean Architecture & Engineering Standards */}
+          <ArchitectureSection />
 
-        {/* 4. Engineering Matrix & Skills */}
-        <SkillsSection />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-b border-white/10" />
+          </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="fading-divider" />
-        </div>
+          {/* 4. Engineering Matrix & Core Disciplines */}
+          <SkillsSection />
 
-        {/* 5. Contact & Structured Inquiry */}
-        <ContactSection email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
-      </main>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-b border-white/10" />
+          </div>
 
-      {/* Minimalist Developer Footer */}
-      <Footer email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
+          {/* 5. Direct Correspondence & Inquiry Form */}
+          <ContactSection email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
+        </main>
+
+        {/* Editorial Footer */}
+        <Footer email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
+      </div>
     </div>
   );
 }
