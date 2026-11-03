@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { 
   Copy, 
   Check, 
-  ExternalLink, 
   Menu, 
-  X
+  X,
+  Sparkles
 } from 'lucide-react';
 import { GithubIcon } from './GithubIcon';
 
@@ -33,83 +33,93 @@ export const Navbar: React.FC<NavbarProps> = ({ email }) => {
   };
 
   const navLinks = [
-    { label: 'Works', href: '#projects', index: '01' },
-    { label: 'Architecture', href: '#architecture', index: '02' },
-    { label: 'Stack', href: '#stack', index: '03' },
-    { label: 'Contact', href: '#contact', index: '04' },
+    { label: 'Projects', href: '#projects', isFeatured: true },
+    { label: 'Architecture', href: '#architecture' },
+    { label: 'Stack', href: '#stack' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#050507]/90 backdrop-blur-xl border-b border-white/10 py-4 shadow-2xl' 
+          ? 'bg-[#05070D]/85 backdrop-blur-xl border-b border-white/10 py-4 shadow-2xl' 
           : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Identity - Reference #5 Style (Rawables. logo feel) */}
+          {/* Brand Identity - Reference #2 (FluxEdit style mark) */}
           <a 
             href="#" 
-            className="group flex flex-col focus:outline-none"
+            className="group flex items-center gap-3 focus:outline-none"
             aria-label="Home"
           >
-            <span className="font-sans text-xl font-bold tracking-tight text-white group-hover:text-[#00F5A0] transition-colors flex items-center">
-              Youssef.Gebaly<span className="text-[#00F5A0] ml-0.5">_</span>
-            </span>
-            <span className="font-mono text-[9px] text-[#94A3B8] uppercase tracking-[0.2em] -mt-0.5">
-              Full-Stack Developer
-            </span>
+            {/* Tech Waveform Icon */}
+            <div className="flex items-center gap-0.5 h-6">
+              <span className="w-1 h-3.5 rounded-full bg-[#3B82F6] group-hover:h-5 transition-all duration-200" />
+              <span className="w-1 h-5 rounded-full bg-[#FF7A30] group-hover:h-3.5 transition-all duration-200" />
+              <span className="w-1 h-4 rounded-full bg-white group-hover:h-6 transition-all duration-200" />
+              <span className="w-1 h-2 rounded-full bg-[#3B82F6] group-hover:h-4 transition-all duration-200" />
+            </div>
+
+            <div>
+              <span className="font-sans text-lg font-bold tracking-tight text-white group-hover:text-[#FF7A30] transition-colors flex items-center">
+                Youssef.Gebaly
+              </span>
+              <span className="block font-mono text-[9px] text-[#94A3B8] uppercase tracking-[0.2em] -mt-0.5">
+                Full-Stack Developer
+              </span>
+            </div>
           </a>
 
-          {/* Center Navigation Links (Reference #5 pill style) */}
+          {/* Center Navigation Links (Reference #2 style with dot indicator) */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="group text-xs font-mono uppercase tracking-widest text-[#94A3B8] hover:text-white transition-colors relative py-1"
+                className="group text-xs font-sans tracking-wide text-[#94A3B8] hover:text-white transition-colors flex items-center gap-1.5 py-1"
               >
+                {link.isFeatured && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A30] shadow-[0_0_8px_rgba(255,122,48,0.8)]" />
+                )}
                 <span>{link.label}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00F5A0] group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
           {/* Right Action Controls */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* Quick Email Pill */}
+            {/* Direct Copy Button */}
             <motion.button
               whileTap={{ scale: 0.96 }}
               onClick={handleCopyEmail}
-              className="flex items-center gap-2 px-4 py-2 text-xs font-mono tracking-wider text-[#94A3B8] hover:text-white border border-white/10 hover:border-white/25 rounded-full transition-all cursor-pointer bg-white/[0.02]"
+              className="flex items-center gap-2 px-3.5 py-1.5 text-xs font-sans tracking-wide text-[#94A3B8] hover:text-white transition-colors cursor-pointer"
               title="Copy developer email address"
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-[#00F5A0]" />
-                  <span className="text-[#00F5A0]">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-[#FF7A30]" />
+                  <span className="text-[#FF7A30]">Email Copied</span>
                 </>
               ) : (
                 <>
                   <Copy className="w-3.5 h-3.5 text-[#94A3B8]" />
-                  <span>Email</span>
+                  <span>Copy Email</span>
                 </>
               )}
             </motion.button>
 
-            {/* GitHub Action */}
+            {/* Glowing Pill Button (Reference #2 "Get Started Free" button) */}
             <motion.a
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.96 }}
-              href="https://github.com/youssefgebaly31256458-cmd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 text-xs font-mono uppercase tracking-wider text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#00F5A0]/50 rounded-full transition-all"
+              href="#contact"
+              className="flex items-center gap-2 px-5 py-2 text-xs font-sans font-medium text-white bg-white/10 hover:bg-white/15 border border-white/20 rounded-full shadow-[0_0_15px_rgba(255,122,48,0.2)] hover:shadow-[0_0_20px_rgba(255,122,48,0.4)] transition-all"
             >
-              <GithubIcon className="w-3.5 h-3.5" />
-              <span>GitHub</span>
-              <ExternalLink className="w-3 h-3 text-[#94A3B8]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#FF7A30]" />
+              <span>Get in Touch</span>
             </motion.a>
           </div>
 
@@ -119,37 +129,39 @@ export const Navbar: React.FC<NavbarProps> = ({ email }) => {
             className="md:hidden p-2 rounded-lg text-[#94A3B8] hover:text-white focus:outline-none"
             aria-label="Toggle Navigation"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 text-[#00F5A0]" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-[#FF7A30]" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 p-5 rounded-2xl bg-[#08080A] border border-white/10 space-y-3 shadow-2xl">
+          <div className="md:hidden mt-4 p-5 rounded-2xl bg-[#080B14] border border-white/10 space-y-3 shadow-2xl">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2 text-sm font-mono uppercase tracking-wider text-[#94A3B8] hover:text-[#00F5A0] transition-colors border-b border-white/[0.05]"
+                className="flex items-center justify-between py-2 text-sm font-sans text-[#94A3B8] hover:text-[#FF7A30] transition-colors border-b border-white/[0.05]"
               >
                 <span>{link.label}</span>
-                <span className="text-xs text-[#00F5A0]">{link.index}</span>
+                {link.isFeatured && (
+                  <span className="w-2 h-2 rounded-full bg-[#FF7A30]" />
+                )}
               </a>
             ))}
             <div className="pt-3 flex flex-col gap-2">
               <button
                 onClick={handleCopyEmail}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-mono text-white bg-white/[0.04] border border-white/10 rounded-xl"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-sans text-white bg-white/[0.04] border border-white/10 rounded-xl"
               >
-                {copied ? <Check className="w-4 h-4 text-[#00F5A0]" /> : <Copy className="w-4 h-4 text-[#94A3B8]" />}
+                {copied ? <Check className="w-4 h-4 text-[#FF7A30]" /> : <Copy className="w-4 h-4 text-[#94A3B8]" />}
                 <span>{copied ? 'Email Copied' : email}</span>
               </button>
               <a
                 href="https://github.com/youssefgebaly31256458-cmd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-mono text-white bg-white/[0.04] border border-white/10 rounded-xl"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-sans text-white bg-white/[0.04] border border-white/10 rounded-xl"
               >
                 <GithubIcon className="w-4 h-4" />
                 <span>GitHub Archive</span>

@@ -12,24 +12,24 @@ const DEVELOPER_PHONE = '+201140423096';
 
 export function App(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-[#050507] text-[#94A3B8] selection:bg-[#00F5A0]/25 selection:text-[#00F5A0] relative overflow-x-hidden">
-      {/* Centered Electric Indigo Ambient Radial Lighting (Reference #5) */}
-      <div className="fixed inset-0 bg-ambient-indigo pointer-events-none z-0" />
+    <div className="min-h-screen bg-[#05070D] text-[#94A3B8] selection:bg-[#FF7A30]/25 selection:text-[#FF7A30] relative overflow-x-hidden">
+      {/* Reference #2 Dual Horizon Lighting (Electric Blue Top + Warm Cantaloupe Orange Horizon) */}
+      <div className="fixed inset-0 bg-horizon-dual pointer-events-none z-0" />
 
       <div className="relative z-10">
-        {/* Top Floating Navigation */}
+        {/* Top Navbar */}
         <Navbar email={DEVELOPER_EMAIL} />
 
         {/* Main Canvas Flow */}
         <main className="space-y-4 md:space-y-8">
-          {/* 1. Hero Section & Tech Stack Bar */}
+          {/* 1. Hero Section (with Center Halo Glow + Left/Right Stats) */}
           <Hero email={DEVELOPER_EMAIL} />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-b border-white/10" />
           </div>
 
-          {/* 2. Seamless & Borderless Projects Showcase */}
+          {/* 2. Featured Projects Emerging from Horizon Glow */}
           <FeaturedProjects />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ export function App(): React.JSX.Element {
           <ContactSection email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
         </main>
 
-        {/* Editorial Footer */}
+        {/* Colophon Footer */}
         <Footer email={DEVELOPER_EMAIL} phone={DEVELOPER_PHONE} />
       </div>
     </div>
