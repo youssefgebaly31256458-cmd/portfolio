@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B0D0E;
+    color: #E2E8F0;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C2127;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EF4444;
+}
+
+/* Fading Hairline Dividers */
+.fading-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.07) 50%, transparent 100%);
+}
+
+.fading-divider-crimson {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(239, 68, 68, 0.25) 50%, transparent 100%);
+}
+
+/* Fluid Borderless Surfaces */
+.fluid-card {
+  background: rgba(255, 255, 255, 0.018);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fluid-card:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* Ambient Radial Hover Bloom */
+.radial-bloom {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(239, 68, 68, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.group:hover .radial-bloom {
+  opacity: 1;
+}
+
+/* Background Gradients */
+.bg-radial-crimson {
+  background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.1) 0%, rgba(11, 13, 14, 0) 70%);
+}
+
+.bg-radial-crimson-bottom {
+  background: radial-gradient(circle at 50% 100%, rgba(220, 38, 38, 0.08) 0%, rgba(11, 13, 14, 0) 65%);
+}
+
+.bg-grid-blueprint {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
