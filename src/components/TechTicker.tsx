@@ -48,7 +48,7 @@ export const TechTicker: React.FC = () => {
       {/* Category Filter Tabs */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-white/10">
         <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#94A3B8] select-none">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A30]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E11D48] shadow-[0_0_8px_#E11D48]" />
           <span>Core Engineering Stack</span>
         </div>
 
@@ -60,8 +60,8 @@ export const TechTicker: React.FC = () => {
               onClick={() => setActiveCategory(cat)}
               className={`text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer pb-0.5 ${
                 activeCategory === cat
-                  ? 'text-white border-b-2 border-[#FF7A30] font-medium'
-                  : 'text-[#94A3B8] hover:text-white'
+                  ? 'text-[#F8FAFC] border-b-2 border-[#E11D48] font-medium'
+                  : 'text-[#94A3B8] hover:text-[#F8FAFC]'
               }`}
             >
               {cat}
@@ -77,16 +77,16 @@ export const TechTicker: React.FC = () => {
           return (
             <div
               key={tech.name}
-              className="p-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-[#FF7A30]/50 transition-all flex flex-col justify-between select-none group"
+              className="p-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-[#E11D48]/40 transition-all flex flex-col justify-between select-none group"
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8]/70 group-hover:text-[#94A3B8] transition-colors">
                   {tech.category}
                 </span>
-                <Icon className="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-[#FF7A30] transition-colors" />
+                <Icon className="w-3.5 h-3.5 text-[#3872B8] group-hover:text-[#FB7185] transition-colors" />
               </div>
               <div>
-                <h4 className="text-xs font-medium text-white group-hover:text-[#FF7A30] transition-colors">
+                <h4 className="text-xs font-medium text-[#F8FAFC] group-hover:text-[#FB7185] transition-colors">
                   {tech.name}
                 </h4>
                 <p className="text-[11px] text-[#94A3B8] font-mono mt-0.5 truncate">

@@ -52,8 +52,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Bottom Warm Horizon Bloom */}
-      <div className="absolute inset-0 bg-horizon-orange pointer-events-none" />
+      {/* Bottom Muted Crimson Horizon Bloom */}
+      <div className="absolute inset-0 bg-horizon-crimson-bottom pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -64,14 +64,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-[#FF7A30] font-semibold mb-3 select-none">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A30]" />
-            <span>SECTION 04</span>
+          <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-[#FB7185] font-semibold mb-3 select-none">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E11D48] shadow-[0_0_8px_#E11D48]" />
+            <span>SECTION 05</span>
             <span className="text-white/20">/</span>
             <span>CORRESPONDENCE &amp; INQUIRIES</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-white">
-            Direct <span className="italic font-normal text-[#FF7A30]">Correspondence.</span>
+          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-[#F8FAFC]">
+            Direct <span className="italic font-normal text-[#FB7185]">Correspondence.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#94A3B8] mt-3 font-light leading-relaxed">
             Available for full-stack engineering contracts, backend architecture in ASP.NET Core, and high-performance React frontends. Connect directly to discuss technical requirements, architecture reviews, or delivery milestones.
@@ -85,12 +85,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           {/* Left Column: Direct Contact & Availability Profile */}
           <div className="lg:col-span-5 space-y-5">
             {/* Quick Email Card */}
-            <div className="p-7 rounded-2xl bg-[#080B14] border border-white/10 hover:border-[#FF7A30]/40 transition-all">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF7A30] select-none flex items-center gap-1.5 font-medium">
-                <Mail className="w-3.5 h-3.5 text-[#FF7A30]" />
+            <div className="p-7 rounded-2xl bg-[#080D1A] border border-white/10 hover:border-[#E11D48]/40 transition-all">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#FB7185] select-none flex items-center gap-1.5 font-medium">
+                <Mail className="w-3.5 h-3.5 text-[#FB7185]" />
                 Primary Channel
               </span>
-              <h3 className="font-serif text-2xl text-white mt-1 mb-1 font-normal">
+              <h3 className="font-serif text-2xl text-[#F8FAFC] mt-1 mb-1 font-normal">
                 Direct Developer Email
               </h3>
               <p className="text-xs text-[#94A3B8] mb-5 font-mono break-all">
@@ -101,7 +101,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <motion.button
                   whileTap={{ scale: 0.96 }}
                   onClick={handleCopyEmail}
-                  className="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#FF7A30] hover:bg-[#FF8A48] text-white font-medium text-xs uppercase tracking-wider transition-colors shadow-[0_0_20px_rgba(255,122,48,0.3)] cursor-pointer"
+                  className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-full min-h-[44px] bg-[#E11D48] hover:bg-[#F43F5E] text-white font-medium text-xs uppercase tracking-wider transition-colors shadow-[0_0_20px_rgba(225,29,72,0.3)] cursor-pointer"
                 >
                   {copiedEmail ? (
                     <>
@@ -119,7 +119,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <motion.a
                   whileTap={{ scale: 0.96 }}
                   href={`mailto:${email}`}
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-full min-h-[44px] bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono transition-colors"
                 >
                   <Send className="w-3.5 h-3.5 text-[#94A3B8]" />
                   <span>Open Client</span>
@@ -129,11 +129,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
             {/* Direct Phone Line Card */}
             {phone && (
-              <div className="p-7 rounded-2xl bg-[#080B14] border border-white/10 hover:border-[#FF7A30]/40 transition-all">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF7A30] select-none font-medium">
+              <div className="p-7 rounded-2xl bg-[#080D1A] border border-white/10 hover:border-[#E11D48]/40 transition-all">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#FB7185] select-none font-medium">
                   Voice &amp; Direct Line
                 </span>
-                <h3 className="font-serif text-2xl text-white mt-1 mb-1 font-normal">
+                <h3 className="font-serif text-2xl text-[#F8FAFC] mt-1 mb-1 font-normal">
                   Telephone Contact
                 </h3>
                 <p className="text-xs text-[#94A3B8] mb-5 font-mono">
@@ -144,7 +144,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <motion.button
                     whileTap={{ scale: 0.96 }}
                     onClick={handleCopyPhone}
-                    className="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#FF7A30] hover:bg-[#FF8A48] text-white font-medium text-xs uppercase tracking-wider transition-colors shadow-[0_0_20px_rgba(255,122,48,0.3)] cursor-pointer"
+                    className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-full min-h-[44px] bg-[#E11D48] hover:bg-[#F43F5E] text-white font-medium text-xs uppercase tracking-wider transition-colors shadow-[0_0_20px_rgba(225,29,72,0.3)] cursor-pointer"
                   >
                     {copiedPhone ? (
                       <>
@@ -162,7 +162,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <motion.a
                     whileTap={{ scale: 0.96 }}
                     href={`tel:${phone}`}
-                    className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono transition-colors"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-full min-h-[44px] bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#94A3B8]" />
                     <span>Call Direct</span>
@@ -172,14 +172,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             )}
 
             {/* GitHub Card */}
-            <div className="p-7 rounded-2xl bg-[#080B14] border border-white/10 hover:border-[#3B82F6]/40 transition-all">
+            <div className="p-7 rounded-2xl bg-[#080D1A] border border-white/10 hover:border-[#3872B8]/40 transition-all">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-white">
                     <GithubIcon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-xl text-white font-normal">GitHub Repositories</h4>
+                    <h4 className="font-serif text-xl text-[#F8FAFC] font-normal">GitHub Repositories</h4>
                     <span className="text-xs font-mono text-[#94A3B8]">@youssefgebaly31256458-cmd</span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   href="https://github.com/youssefgebaly31256458-cmd"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono bg-[#3B82F6]/10 hover:bg-[#3B82F6]/20 border border-[#3B82F6]/30 text-[#3B82F6] transition-colors"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono bg-[#3872B8]/15 hover:bg-[#3872B8]/25 border border-[#3872B8]/30 text-[#3872B8] transition-colors"
                 >
                   <span>Explore</span>
                   <ExternalLink className="w-3 h-3" />
@@ -200,9 +200,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             </div>
 
             {/* Operating Availability Parameters */}
-            <div className="p-7 rounded-2xl bg-[#080B14] border border-white/10 space-y-3 select-none">
+            <div className="p-7 rounded-2xl bg-[#080D1A] border border-white/10 space-y-3 select-none">
               <h4 className="text-xs font-mono uppercase tracking-widest text-[#94A3B8] flex items-center gap-2">
-                <FileCheck2 className="w-4 h-4 text-[#FF7A30]" />
+                <FileCheck2 className="w-4 h-4 text-[#FB7185]" />
                 Engagement &amp; Availability Parameters
               </h4>
               <div className="space-y-2.5 text-xs font-mono text-[#94A3B8] pt-1">
@@ -210,14 +210,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <span className="text-white/40 flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-[#94A3B8]" /> Response Latency:
                   </span>
-                  <span className="text-white font-medium">&lt; 24 Business Hours</span>
+                  <span className="text-[#F8FAFC] font-medium">&lt; 24 Business Hours</span>
                 </div>
                 {phone && (
                   <div className="flex items-center justify-between py-2 border-b border-white/[0.04]">
                     <span className="text-white/40 flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#94A3B8]" /> Phone Direct:
                     </span>
-                    <a href={`tel:${phone}`} className="text-white hover:text-[#FF7A30] font-medium transition-colors">
+                    <a href={`tel:${phone}`} className="text-[#F8FAFC] hover:text-[#FB7185] font-medium transition-colors">
                       {phone}
                     </a>
                   </div>
@@ -226,13 +226,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <span className="text-white/40 flex items-center gap-1.5">
                     <Globe className="w-3.5 h-3.5 text-[#94A3B8]" /> Collaboration Model:
                   </span>
-                  <span className="text-white font-medium">Remote / Hybrid Engagements</span>
+                  <span className="text-[#F8FAFC] font-medium">Remote / Hybrid Engagements</span>
                 </div>
                 <div className="flex items-center justify-between py-2">
                   <span className="text-white/40 flex items-center gap-1.5">
                     <Code2 className="w-3.5 h-3.5 text-[#94A3B8]" /> Primary Specialization:
                   </span>
-                  <span className="text-[#3B82F6] font-medium">Full-Stack Developer</span>
+                  <span className="text-[#3872B8] font-medium">Full-Stack Developer</span>
                 </div>
               </div>
             </div>
@@ -240,14 +240,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
           {/* Right Column: Direct Dispatch Inquiry Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-2xl bg-[#080B14] border border-white/10 hover:border-white/20 transition-all h-full flex flex-col justify-between">
+            <div className="p-8 sm:p-10 rounded-2xl bg-[#080D1A] border border-white/10 hover:border-white/20 transition-all h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                   <div>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF7A30] select-none font-medium">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#FB7185] select-none font-medium">
                       Correspondence Protocol
                     </span>
-                    <h3 className="font-serif text-3xl text-white font-normal mt-1">
+                    <h3 className="font-serif text-3xl text-[#F8FAFC] font-normal mt-1">
                       Dispatch Technical Inquiry
                     </h3>
                   </div>
@@ -276,10 +276,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                           key={type}
                           whileTap={{ scale: 0.96 }}
                           onClick={() => setInquiryType(type)}
-                          className={`px-3 py-2.5 text-xs font-mono rounded-xl text-left transition-all cursor-pointer ${
+                          className={`px-3 py-2.5 min-h-[44px] text-xs font-mono rounded-xl text-left transition-all cursor-pointer flex items-center ${
                             inquiryType === type
-                              ? 'bg-[#FF7A30] text-white font-medium shadow-[0_0_15px_rgba(255,122,48,0.35)]'
-                              : 'bg-white/[0.02] border border-white/10 text-[#94A3B8] hover:text-white hover:bg-white/[0.05]'
+                              ? 'bg-[#E11D48] text-white font-medium shadow-[0_0_15px_rgba(225,29,72,0.35)]'
+                              : 'bg-white/[0.02] border border-white/10 text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05]'
                           }`}
                         >
                           {type}
@@ -299,7 +299,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       value={senderEmail}
                       onChange={(e) => setSenderEmail(e.target.value)}
                       placeholder="alex@enterprise.io"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.02] border border-white/10 focus:border-[#FF7A30] focus:bg-white/[0.04] text-xs sm:text-sm font-mono text-white placeholder:text-[#94A3B8]/40 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.02] border border-white/10 focus:border-[#E11D48] focus:bg-white/[0.04] text-xs sm:text-sm font-mono text-[#F8FAFC] placeholder:text-[#94A3B8]/40 focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -314,7 +314,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       value={inquiryMessage}
                       onChange={(e) => setInquiryMessage(e.target.value)}
                       placeholder="Outline target tech stack requirements, project scope, database complexity, or timelines..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.02] border border-white/10 focus:border-[#FF7A30] focus:bg-white/[0.04] text-xs sm:text-sm font-mono text-white placeholder:text-[#94A3B8]/40 focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.02] border border-white/10 focus:border-[#E11D48] focus:bg-white/[0.04] text-xs sm:text-sm font-mono text-[#F8FAFC] placeholder:text-[#94A3B8]/40 focus:outline-none transition-colors resize-none"
                     />
                   </div>
 
@@ -327,7 +327,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       type="submit"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#FF7A30] hover:bg-[#FF8A48] text-white font-medium text-xs sm:text-sm uppercase tracking-wider transition-colors shadow-[0_0_25px_rgba(255,122,48,0.4)] cursor-pointer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#E11D48] hover:bg-[#F43F5E] text-white font-medium text-xs sm:text-sm uppercase tracking-wider transition-colors shadow-[0_0_25px_rgba(225,29,72,0.4)] cursor-pointer"
                     >
                       <Send className="w-4 h-4 text-white" />
                       <span>Dispatch Technical Inquiry</span>
